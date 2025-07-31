@@ -2,9 +2,16 @@
 
 **PythonByzaticCommons** is a modular utility library for Python that provides a collection of reusable components for file reading, exception handling, logging, in-memory storage, singleton management, and more. Designed for extensibility and clean architecture, it helps accelerate development by offering ready-to-use patterns and interfaces.
 
+Artifact available on pypi:  
+https://pypi.org/project/python-byzatic-commons/0.1.0/
+
+```bash
+pip install python-byzatic-commons
+```
+
 ---
 
-## 📦 Modules Overview
+## Modules Overview
 
 ### `exceptions`
 A set of structured exception classes to formalize error handling in complex systems.
@@ -67,14 +74,6 @@ Provides a class-based singleton pattern.
 - **`Singleton`**: A metaclass-based implementation that ensures a class has only one instance across the application.
 
 Useful for shared services like loggers, configuration managers, etc.
-
----
-
-## ✅ Installation
-
-```bash
-pip install python-byzatic-commons
-```
 
 ---
 
