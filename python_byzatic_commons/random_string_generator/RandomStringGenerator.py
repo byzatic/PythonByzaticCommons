@@ -5,7 +5,7 @@ import logging
 import random
 import string
 import secrets
-from .ABCAbstractCollection.RandomStringGeneratorInterface import RandomStringGeneratorInterface
+from .interfaces.RandomStringGeneratorInterface import RandomStringGeneratorInterface
 
 
 class RandomStringGenerator(RandomStringGeneratorInterface):

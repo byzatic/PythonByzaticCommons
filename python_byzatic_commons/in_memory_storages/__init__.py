@@ -1,10 +1,12 @@
 #
 #
 #
+import interfaces
+import key_value_storages
+import storages_manager
 
-__name__ = "lib-byzatic-common-NodeStorage"
-__version__ = "0.0.1"
 __all__ = [
     'interfaces',
-    'key_value_storages'
+    'key_value_storages',
+    'storages_manager'
 ]
