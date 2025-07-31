@@ -77,7 +77,7 @@ Useful for shared services like loggers, configuration managers, etc.
 
 ---
 
-## 📖 Example Usage
+## Example Usage
 
 ```python
 from python_byzatic_commons.filereaders import JsonFileReader
@@ -91,6 +91,6 @@ logger.info("App started.")
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the terms of the **Apache 2.0** license.
