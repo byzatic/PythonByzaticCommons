@@ -83,10 +83,29 @@ Useful for shared services like loggers, configuration managers, etc.
 from python_byzatic_commons.filereaders import JsonFileReader
 reader = JsonFileReader()
 config = reader.read("config.json")
+```
 
+```python
+import os
+import logging
 from python_byzatic_commons.logging_manager import LoggingManager
-logger = LoggingManager()
-logger.info("App started.")
+
+system_script_dir = os.path.abspath(os.path.dirname(__file__))
+logger_config_file_path_json = os.path.join(
+                system_script_dir,
+                'configuration',
+                'logger_configuration.json'
+            )
+
+logging_manager: LoggingManager = LoggingManager()
+logging_manager.init_logging(
+    logger_config_file_path_json,
+    "JSON"
+)
+applogger = logging.getLogger("Application-logger")
+
+applogger.debug(f"Creating context")
+
 ```
 
 ---
