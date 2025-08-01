@@ -3,7 +3,7 @@
 **PythonByzaticCommons** is a modular utility library for Python that provides a collection of reusable components for file reading, exception handling, logging, in-memory storage, singleton management, and more. Designed for extensibility and clean architecture, it helps accelerate development by offering ready-to-use patterns and interfaces.
 
 Artifact available on pypi:  
-https://pypi.org/project/python-byzatic-commons/0.1.0/
+https://pypi.org/project/python-byzatic-commons
 
 ```bash
 pip install python-byzatic-commons
@@ -22,6 +22,26 @@ A set of structured exception classes to formalize error handling in complex sys
 - **`CriticalErrorException`**: Raised for non-recoverable fatal errors.
 - **`NotImplementedException`**: Placeholder for yet-to-be-implemented logic.
 
+```python
+from python_byzatic_commons.exceptions import OperationIncompleteException
+from python_byzatic_commons.exceptions import ExitHandlerException
+
+
+def main():
+    try:
+      ...
+    except OperationIncompleteException as oie:
+        raise ExitHandlerException(oie.args, errno=oie.errno, exception=oie)
+    except Exception as e:
+        raise ExitHandlerException(e.args, exception=e)
+    except KeyboardInterrupt as ki:
+        raise ExitHandlerException(ki.args, exception=ki)
+
+
+if __name__ == '__main__':
+    main()
+```
+
 ---
 
 ### `filereaders`
@@ -36,6 +56,30 @@ Unified interfaces and concrete implementations for parsing configuration files.
   - `ConfigParserFileReader`: Loads `.ini`-style config files using `configparser`.
 
 All readers validate input paths and support standard Python error handling.
+
+```python
+import os
+import sys
+from python_byzatic_commons.filereaders import JsonFileReader
+from python_byzatic_commons.filereaders.interfaces import BaseReaderInterface
+
+
+def main():
+    runtime_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    logger_config_file_path_json = os.path.join(
+        runtime_dir,
+        'configuration',
+        'configuration.json'
+    )
+    
+    reader: BaseReaderInterface = JsonFileReader()
+    config: dict = reader.read(logger_config_file_path_json)
+    print(config)
+
+
+if __name__ == '__main__':
+    main()
+```
 
 ---
 
@@ -56,6 +100,38 @@ In-memory key-value storage layer with interchangeable implementations and manag
 
 Test coverage is included in the `test/` directory.
 
+```python
+from python_byzatic_commons.in_memory_storages.interfaces import KeyValueDictStorageInterface
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueDictStorage import KeyValueDictStorage
+
+
+# create an in-memory dictionary storage
+storage: KeyValueDictStorageInterface = KeyValueDictStorage("MyAwsomeStorage")
+
+# create entries
+storage.create("foo", {"value": 123})
+storage.create("bar", {"value": 456})
+
+# read entry
+print(storage.read("foo"))  # → {'value': 123}
+
+# update entry
+storage.update("foo", {"value": 999})
+
+# check existence
+if storage.contains("foo"):
+    print("Entry 'foo' exists!")
+
+# read all
+print(storage.read_all())  # → {'foo': {'value': 999}, 'bar': {'value': 456}}
+
+# delete one
+storage.delete("bar")
+
+# drop all
+storage.drop()
+```
+
 ---
 
 ### `logging_manager`
@@ -66,6 +142,52 @@ Encapsulates logging configuration and output.
 
 Supports colored output, custom formatters, and stream redirection.
 
+```python
+import os
+import sys
+import logging
+from python_byzatic_commons.logging_manager import LoggingManager
+from python_byzatic_commons.logging_manager.interfaces import LoggingManagerInterface
+
+
+def main():
+    runtime_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    logger_config_file_path_json = os.path.join(
+        runtime_dir,
+        'configuration',
+        'logger_configuration.json'
+    )
+
+    logging_manager: LoggingManagerInterface = LoggingManager()
+    logging_manager.init_logging(
+        logger_config_file_path_json,
+        "JSON"
+    )
+    
+    logger = logging.getLogger("Application-logger")
+    
+    logger.debug("some debug")
+
+
+if __name__ == '__main__':
+    main()
+```
+
+```python
+import logging
+
+class SomeClass(object):
+    __some_var: list
+
+    def __init__(self, some_var: list):
+        self.__logger = logging.getLogger(f"{type(self).__name__}")
+        self.__some_var: list = some_var
+
+    def some_method(self, some_other_var: str) -> None:
+      self.__logger.debug(f"some_other_var= {some_other_var}")
+      self.__logger.debug(f"some_var= {self.__some_var}")
+```
+
 ---
 
 ### `singleton`
@@ -75,37 +197,11 @@ Provides a class-based singleton pattern.
 
 Useful for shared services like loggers, configuration managers, etc.
 
----
-
-## Example Usage
-
 ```python
-from python_byzatic_commons.filereaders import JsonFileReader
-reader = JsonFileReader()
-config = reader.read("config.json")
-```
+from python_byzatic_commons.singleton import Singleton
 
-```python
-import os
-import logging
-from python_byzatic_commons.logging_manager import LoggingManager
-
-system_script_dir = os.path.abspath(os.path.dirname(__file__))
-logger_config_file_path_json = os.path.join(
-                system_script_dir,
-                'configuration',
-                'logger_configuration.json'
-            )
-
-logging_manager: LoggingManager = LoggingManager()
-logging_manager.init_logging(
-    logger_config_file_path_json,
-    "JSON"
-)
-applogger = logging.getLogger("Application-logger")
-
-applogger.debug(f"Creating context")
-
+class SomeClass(Singleton):
+    . . .
 ```
 
 ---
