@@ -353,18 +353,5 @@ __pycache__/
 *.report.xml
 
 # [CURRENT PROJECT] engine dirs
-logs/*
-
-# [CURRENT PROJECT] engine files
-configuration/logger_configuration.json
-configuration/app_configuration.ini
-configuration/app_configuration.json
-
-# [CURRENT PROJECT] - Business logic data
-data/graph_data.json
-data/modules_specification.json
-data/new_polling_subsystem_data.json
-data/PROJECT.txt
-
-# [CURRENT PROJECT] - Business logic modules
-modules/graphite_application_modules
+dist/*
+python_byzatic_commons.egg-info/*
