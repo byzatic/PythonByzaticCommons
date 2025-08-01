@@ -1,9 +1,9 @@
 #
 #
 #
-import interfaces
-import key_value_storages
-import storages_manager
+import python_byzatic_commons.in_memory_storages.interfaces
+import python_byzatic_commons.in_memory_storages.key_value_storages
+import python_byzatic_commons.in_memory_storages.storages_manager
 
 __all__ = [
     'interfaces',

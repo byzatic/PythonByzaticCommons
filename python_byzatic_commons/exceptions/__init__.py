@@ -3,11 +3,11 @@
 #
 
 # interfaces
-from .BaseErrorException import BaseErrorException
-from .CriticalErrorException import CriticalErrorException
-from .ExitHandlerException import ExitHandlerException
-from .OperationIncompleteException import OperationIncompleteException
-from .NotImplementedException import NotImplementedException
+from python_byzatic_commons.exceptions.BaseErrorException import BaseErrorException
+from python_byzatic_commons.exceptions.CriticalErrorException import CriticalErrorException
+from python_byzatic_commons.exceptions.ExitHandlerException import ExitHandlerException
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
+from python_byzatic_commons.exceptions.NotImplementedException import NotImplementedException
 
 __all__ = [
     'BaseErrorException',

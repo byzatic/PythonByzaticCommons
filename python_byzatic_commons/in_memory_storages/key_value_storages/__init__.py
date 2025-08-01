@@ -3,12 +3,12 @@
 #
 
 # interfaces
-from .KeyValueDictStorage import KeyValueDictStorage
-from .KeyValueModuleTypeStorage import KeyValueModuleTypeStorage
-from .KeyValueObjectStorage import KeyValueObjectStorage
-from .KeyValueStoragesStorage import KeyValueStoragesStorage
-from .KeyValueStringStorage import KeyValueStringStorage
-from .KeyValueListStorage import KeyValueListStorage
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueDictStorage import KeyValueDictStorage
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueModuleTypeStorage import KeyValueModuleTypeStorage
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueObjectStorage import KeyValueObjectStorage
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueStoragesStorage import KeyValueStoragesStorage
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueStringStorage import KeyValueStringStorage
+from python_byzatic_commons.in_memory_storages.key_value_storages.KeyValueListStorage import KeyValueListStorage
 
 __all__ = [
     'KeyValueDictStorage',

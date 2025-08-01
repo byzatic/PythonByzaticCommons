@@ -1,15 +1,15 @@
 #
 #
 #
-import crud
-import exceptions
-import filereaders
-import flattener
-import import_modules_factory
-import in_memory_storages
-import logging_manager
-import random_string_generator
-import singleton
+import python_byzatic_commons.crud
+import python_byzatic_commons.exceptions
+import python_byzatic_commons.filereaders
+import python_byzatic_commons.flattener
+import python_byzatic_commons.import_modules_factory
+import python_byzatic_commons.in_memory_storages
+import python_byzatic_commons.logging_manager
+import python_byzatic_commons.random_string_generator
+import python_byzatic_commons.singleton
 
 __version__ = "0.1.0"
 __all__ = [
