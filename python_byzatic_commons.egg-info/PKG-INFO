@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: python-byzatic-commons
-Version: 0.1.0
+Version: 0.1.1
 Summary: A modular Python library with utilities for flattening, file parsing, error handling, and more.
 Author-email: Svyatoslav Vlasov <s.vlasov.home@icloud.com>
 License:                                  Apache License
