@@ -1,6 +1,6 @@
 [project]
 name = "python-byzatic-commons"
-version = "0.1.6"
+version = "0.1.8"
 description = "A modular Python library with utilities for flattening, file parsing, error handling, and more."
 readme = "README.md"
 license = { file = "LICENSE" }

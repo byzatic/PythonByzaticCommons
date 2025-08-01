@@ -18,13 +18,14 @@ from python_byzatic_commons.logging_manager.interfaces.LoggingManagerInterface i
 
 
 class LoggingManager(LoggingManagerInterface):
-    def __init__(self, base_path: str = __file__):
+    def __init__(self, base_path: str | None = None):
         self.__configuration = dict()
         try:
             self.logger = logging.getLogger("root")
             self.__json_reader = JsonFileReader()
             self.__yaml_reader = YamlFileReader()
-            self.__base_path = base_path
+            if base_path is None:
+                self.__base_path = os.path.dirname(os.path.abspath(sys.argv[0]))
         except OperationIncompleteException as oie:
             raise OperationIncompleteException(oie.args, errno=oie.errno)
         except Exception as err:
