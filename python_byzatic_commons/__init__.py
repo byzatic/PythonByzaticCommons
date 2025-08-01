@@ -11,7 +11,7 @@ import python_byzatic_commons.logging_manager
 import python_byzatic_commons.random_string_generator
 import python_byzatic_commons.singleton
 
-__version__ = "0.1.2"
+__version__ = "0.1.6"
 __all__ = [
     'crud',
     'exceptions',

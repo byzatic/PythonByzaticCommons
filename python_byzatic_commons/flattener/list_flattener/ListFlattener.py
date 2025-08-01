@@ -3,8 +3,8 @@
 #
 import logging
 
-from flattener.interfaces import ListFlattenerInterface
-from python_byzatic_commons.flattener.dl_flattener import DLFlattener
+from python_byzatic_commons.flattener.interfaces.ListFlattenerInterface import ListFlattenerInterface
+from python_byzatic_commons.flattener.dl_flattener.DLFlattener import DLFlattener
 
 
 class ListFlattener(ListFlattenerInterface):

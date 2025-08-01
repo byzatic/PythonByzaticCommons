@@ -8,8 +8,8 @@
 import logging
 import inspect
 from copy import deepcopy
-from python_byzatic_commons.in_memory_storages.interfaces import KeyValueObjectStorageInterface
-from python_byzatic_commons.exceptions import OperationIncompleteException
+from python_byzatic_commons.in_memory_storages.interfaces.KeyValueObjectStorageInterface import KeyValueObjectStorageInterface
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
 
 
 class KeyValueObjectStorage(KeyValueObjectStorageInterface):

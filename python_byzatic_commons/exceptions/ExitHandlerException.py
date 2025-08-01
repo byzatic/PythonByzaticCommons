@@ -5,7 +5,7 @@ import logging
 from errno import ENOTRECOVERABLE
 import traceback
 import sys
-from python_byzatic_commons.exceptions import BaseErrorException
+from python_byzatic_commons.exceptions.BaseErrorException import BaseErrorException
 
 
 class ExitHandlerException(BaseErrorException):

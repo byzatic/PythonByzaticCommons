@@ -5,7 +5,7 @@ import logging
 import random
 import string
 import secrets
-from .interfaces.RandomStringGeneratorInterface import RandomStringGeneratorInterface
+from python_byzatic_commons.random_string_generator.interfaces.RandomStringGeneratorInterface import RandomStringGeneratorInterface
 
 
 class RandomStringGenerator(RandomStringGeneratorInterface):

@@ -3,8 +3,8 @@
 #
 import logging
 from typing import Union, Dict, List
-from python_byzatic_commons.flattener.dl_flattener import DLFlattener
-from flattener.interfaces import JsonFlattenerInterface
+from python_byzatic_commons.flattener.dl_flattener.DLFlattener import DLFlattener
+from python_byzatic_commons.flattener.interfaces.JsonFlattenerInterface import JsonFlattenerInterface
 
 
 class JsonFlattener(JsonFlattenerInterface):

@@ -2,7 +2,7 @@ import logging
 import copy
 from typing import Union, Dict, List
 from collections.abc import MutableMapping
-from flattener.interfaces import DLFlattenerInterface
+from python_byzatic_commons.flattener.interfaces.DLFlattenerInterface import DLFlattenerInterface
 # TODO: Json Nan and Nill value and their keys shouldn't be added to final list
 # TODO: Python None should be as 'key_name': None
 

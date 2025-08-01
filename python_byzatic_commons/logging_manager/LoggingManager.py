@@ -10,10 +10,10 @@
 import sys
 import logging
 from logging.config import dictConfig, fileConfig
-from python_byzatic_commons.filereaders import JsonFileReader
-from python_byzatic_commons.filereaders import YamlFileReader
-from python_byzatic_commons.exceptions import OperationIncompleteException
-from python_byzatic_commons.logging_manager.interfaces import LoggingManagerInterface
+from python_byzatic_commons.filereaders.JsonFileReader import JsonFileReader
+from python_byzatic_commons.filereaders.YamlFileReader import YamlFileReader
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
+from python_byzatic_commons.logging_manager.interfaces.LoggingManagerInterface import LoggingManagerInterface
 
 
 class LoggingManager(LoggingManagerInterface):

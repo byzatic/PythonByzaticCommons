@@ -1,8 +1,8 @@
 #
 #
 #
-from python_byzatic_commons.exceptions import NotImplementedException
-from python_byzatic_commons.crud.interfaces import KeyValueCRUDInterface
+from python_byzatic_commons.exceptions.NotImplementedException import NotImplementedException
+from python_byzatic_commons.crud.interfaces.KeyValueCRUDInterface import KeyValueCRUDInterface
 
 
 class KeyValueCRUD(KeyValueCRUDInterface):

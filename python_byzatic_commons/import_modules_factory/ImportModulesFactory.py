@@ -36,8 +36,8 @@
 
 import logging
 from types import ModuleType
-from python_byzatic_commons.exceptions import OperationIncompleteException
-from python_byzatic_commons.import_modules_factory.interfaces import ImportModulesFactoryInterface
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
+from python_byzatic_commons.import_modules_factory.interfaces.ImportModulesFactoryInterface import ImportModulesFactoryInterface
 
 
 class ImportModulesFactory(ImportModulesFactoryInterface):

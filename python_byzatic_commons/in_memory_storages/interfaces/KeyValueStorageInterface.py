@@ -2,7 +2,7 @@
 #
 #
 from abc import ABCMeta, abstractmethod
-from python_byzatic_commons.crud.interfaces import KeyValueCRUDInterface
+from python_byzatic_commons.crud.interfaces.KeyValueCRUDInterface import KeyValueCRUDInterface
 
 
 class KeyValueStorageInterface(KeyValueCRUDInterface):

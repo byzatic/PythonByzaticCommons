@@ -2,7 +2,6 @@
 #
 #
 from abc import ABCMeta, abstractmethod
-from configparser import ConfigParser
 
 
 class FlattenerInterface():

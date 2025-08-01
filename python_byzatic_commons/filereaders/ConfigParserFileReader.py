@@ -4,8 +4,8 @@
 import logging
 from configparser import ConfigParser
 
-from python_byzatic_commons.exceptions import OperationIncompleteException
-from python_byzatic_commons.filereaders.interfaces import BaseReaderInterface
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
+from python_byzatic_commons.filereaders.interfaces.BaseReaderInterface import BaseReaderInterface
 
 
 # TODO: ConfigParser saving state

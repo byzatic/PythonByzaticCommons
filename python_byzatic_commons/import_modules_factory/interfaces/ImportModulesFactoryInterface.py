@@ -7,7 +7,7 @@
 #
 from abc import ABCMeta, abstractmethod
 from types import ModuleType
-from python_byzatic_commons.singleton import Singleton
+from python_byzatic_commons.singleton.Singleton import Singleton
 
 
 class ImportModulesFactoryInterface(Singleton):

@@ -9,8 +9,8 @@ import logging
 from logging import Logger
 import inspect
 from copy import deepcopy
-from python_byzatic_commons.in_memory_storages.interfaces import KeyValueStringStorageInterface
-from python_byzatic_commons.exceptions import OperationIncompleteException
+from python_byzatic_commons.in_memory_storages.interfaces.KeyValueStringStorageInterface import KeyValueStringStorageInterface
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
 
 
 class KeyValueStringStorage(KeyValueStringStorageInterface):

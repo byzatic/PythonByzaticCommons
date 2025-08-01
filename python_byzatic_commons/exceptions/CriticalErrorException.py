@@ -4,7 +4,7 @@
 import logging
 import traceback
 import sys
-from python_byzatic_commons.exceptions import BaseErrorException
+from python_byzatic_commons.exceptions.BaseErrorException import BaseErrorException
 
 
 class CriticalErrorException(BaseErrorException):

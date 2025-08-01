@@ -6,8 +6,8 @@ from typing import Union, Dict, List
 
 import yaml
 
-from python_byzatic_commons.exceptions import OperationIncompleteException
-from python_byzatic_commons.filereaders.interfaces import BaseReaderInterface
+from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
+from python_byzatic_commons.filereaders.interfaces.BaseReaderInterface import BaseReaderInterface
 
 
 class YamlFileReader(BaseReaderInterface):

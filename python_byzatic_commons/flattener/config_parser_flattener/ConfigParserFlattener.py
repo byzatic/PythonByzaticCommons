@@ -3,7 +3,7 @@
 #
 import logging
 from configparser import ConfigParser
-from flattener.interfaces import ConfigParserFlattenerInterface
+from python_byzatic_commons.flattener.interfaces.ConfigParserFlattenerInterface import ConfigParserFlattenerInterface
 
 
 class ConfigParserFlattener(ConfigParserFlattenerInterface):

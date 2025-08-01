@@ -2,7 +2,7 @@
 #
 #
 from abc import ABCMeta, abstractmethod
-from python_byzatic_commons.Singleton.Singleton import Singleton
+from python_byzatic_commons.singleton.Singleton import Singleton
 
 
 class LoggingManagerInterface(Singleton):

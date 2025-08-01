@@ -4,7 +4,7 @@
 from abc import ABCMeta, abstractmethod
 from configparser import ConfigParser
 
-from python_byzatic_commons.flattener.interfaces import FlattenerInterface
+from python_byzatic_commons.flattener.interfaces.FlattenerInterface import FlattenerInterface
 
 
 class ConfigParserFlattenerInterface(FlattenerInterface):

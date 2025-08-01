@@ -2,7 +2,7 @@
 #
 #
 from abc import ABCMeta, abstractmethod
-from python_byzatic_commons.in_memory_storages.interfaces import KeyValueStorageInterface
+from python_byzatic_commons.in_memory_storages.interfaces.KeyValueStorageInterface import KeyValueStorageInterface
 
 
 class KeyValueObjectStorageInterface(KeyValueStorageInterface):

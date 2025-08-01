@@ -1,6 +1,6 @@
 #
 #
-from python_byzatic_commons.exceptions import BaseErrorException
+from python_byzatic_commons.exceptions.BaseErrorException import BaseErrorException
 from errno import ENOTRECOVERABLE
 
 
