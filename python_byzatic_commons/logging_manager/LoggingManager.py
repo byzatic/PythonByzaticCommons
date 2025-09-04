@@ -11,6 +11,8 @@ import os
 import sys
 import logging
 from logging.config import dictConfig, fileConfig
+from typing import Optional
+
 from python_byzatic_commons.filereaders.JsonFileReader import JsonFileReader
 from python_byzatic_commons.filereaders.YamlFileReader import YamlFileReader
 from python_byzatic_commons.exceptions.OperationIncompleteException import OperationIncompleteException
@@ -18,7 +20,7 @@ from python_byzatic_commons.logging_manager.interfaces.LoggingManagerInterface i
 
 
 class LoggingManager(LoggingManagerInterface):
-    def __init__(self, base_path: str | None = None):
+    def __init__(self, base_path: Optional[str] = None):
         self.__configuration = dict()
         try:
             self.logger = logging.getLogger("root")
